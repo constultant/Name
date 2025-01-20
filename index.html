@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Mostafa FTOUH, Ph.D.</title>
+  <!-- CSS de Lightbox2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<!-- Script JavaScript de Lightbox2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 
   <!--
     - favicon
@@ -2744,27 +2749,228 @@ scientifique , 2012 , Université de Lorraine - Nancy, France
         <header>
           <h2 class="h2 article-title">Évènements Scientifiques</h2>
         </header>
-<section>
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slide active">
-        <img src="./assets/images/image1.jpeg" alt="Évènement 1">
-        <p class="slide-description">Description de l'évènement 1</p>
-      </div>
-      <div class="slide">
-        <img src="./assets/images/Mota.jpeg" alt="Évènement 2">
-        <p class="slide-description">Description de l'évènement 2</p>
-      </div>
-      <div class="slide">
-        <img src="./assets/images/image3.jpeg" alt="Évènement 3">
-        <p class="slide-description">Description de l'évènement 3</p>
-      </div>
-    </div>
-    <button class="slider-btn prev-btn" aria-label="Slide précédente">&#10094;</button>
-    <button class="slider-btn next-btn" aria-label="Slide suivante">&#10095;</button>
-  </div>
-  
-</section>
+
+      <section class="video2-section">
+      
+
+        <ul class="clients-list has-scrollbar">
+        <div class="video2-container">
+          <div class="video-box">
+            
+            <img 
+          src="assets/images/image12.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          
+          
+          <div class="video-box">
+            <img 
+          src="assets/images/image13.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image4.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0; border-radius: 10px; "
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image11.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image2.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image1.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image3.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image5.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image6.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          
+          <div class="video-box">
+            <img 
+          src="assets/images/image8.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image9.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/image10.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          
+          <div class="video-box">
+            <img 
+          src="assets/images/image14.jpeg" 
+          alt="Description de l'image" 
+          class="zoomable-image"
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          
+          
+          
+        </div>
+        <div id="image-overlay" class="overlay" style="display: none;">
+          <img id="overlay-image" src="" alt="Image agrandie">
+          <span class="close-btn" onclick="closeZoom()">&#10006;</span>
+        </div>
+
+
+      </section>
+      <style>
+        /* Style de l'overlay */
+        .overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1000;
+        }
+        
+        .overlay img {
+          max-width: 90%;
+          max-height: 90%;
+          border-radius: 10px;
+          box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+        }
+        
+        .close-btn {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          color: white;
+          font-size: 30px;
+          cursor: pointer;
+        }
+        </style>
+        
+        <script>
+        /* Fonction pour afficher l'image en plein écran */
+        document.querySelectorAll('.zoomable-image').forEach(image => {
+          image.addEventListener('click', function () {
+            const overlay = document.getElementById('image-overlay');
+            const overlayImage = document.getElementById('overlay-image');
+            overlayImage.src = this.src; // Affecte l'URL de l'image cliquée
+            overlay.style.display = 'flex'; // Affiche l'overlay
+          });
+        });
+        
+        /* Fonction pour fermer l'image agrandie */
+        function closeZoom() {
+          const overlay = document.getElementById('image-overlay');
+          overlay.style.display = 'none'; // Masque l'overlay
+        }
+        </script>
+      <section class="video3-section">
+        <h3 class="h3h">Photos des évènements</h3>
+
+        <ul class="clients-list has-scrollbar">
+
+        <div class="video3-container">
+          
+          <div class="video-box">
+            <img 
+          src="assets/images/photo0.jpg" 
+          alt="Description de l'image"
+
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/photo1.jpeg" 
+          alt="Description de l'image" 
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          
+          
+          <div class="video-box">
+            <img 
+          src="assets/images/photo2.jpeg" 
+          alt="Description de l'image" 
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/photo3.jpeg" 
+          alt="Description de l'image" 
+          style="height: 220px; width: auto; border: 0; border-radius: 10px; "
+      >
+          </div>
+          <div class="video-box">
+            <img 
+          src="assets/images/photo4.jpeg" 
+          alt="Description de l'image" 
+          style="height: 220px; width: auto; border: 0;border-radius: 10px;"
+      >
+          
+      </section>
+
         
         
 
@@ -2795,9 +3001,7 @@ scientifique , 2012 , Université de Lorraine - Nancy, France
             <li class="filter-item">
               <button data-filter-btn data-category="Jurys Recrutements">Jurys Recrutements</button>
             </li>
-            <li class="filter-item">
-              <button data-filter-btn data-category="Sortie Et Stages">Sortie Et Stages</button>
-            </li>
+            
 
             
           </ul>
@@ -3079,40 +3283,6 @@ scientifique , 2012 , Université de Lorraine - Nancy, France
               </ol>
   
           </section>
-          <section class="timeline">
-
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-  
-              <h3 class="h3">Sortie Et Stages</h3>
-            </div>
-  
-            <ol class="timeline-list">
-              
-              <li class="timeline-item" data-filter-item data-category="Jurys Recrutements">
-                <a href="https://revues.imist.ma/index.php/JPM/article/view/46760/26598">
-  
-                <h4 class="h4 timeline-item-title">Communication publique et territoriale : analyse des effets
-                  sur l'entrepreneuriat touristique dans les provinces du
-                  Sud, Maroc</h4>
-  
-                <span>2024</span>
-  
-                <p class="timeline-text">
-                  Fatima Ezzahra BOUSSELHAM, El Mostafa FTOUH, Abdellah EL HAMDAOUI 
-  
-                </p>
-                <p class="timeline-text">
-                  Équipe de recherche en communication, Université Sultan Moulay Slimane, Beni Mellal
-                </p>
-                </a>
-              </li>
-      
-            </ol>
-  
-          </section>
           
 
 
@@ -3128,7 +3298,7 @@ scientifique , 2012 , Université de Lorraine - Nancy, France
 
 
 
-  <button id="test-btn">Clique-moi</button>
+  
 
   <!--
     - custom js link

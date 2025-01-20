@@ -227,6 +227,7 @@ article.active {
 .h2,
 .h3,
 .h4,
+.h3h,
 .h5 {
   color: var(--white-2);
   text-transform: capitalize;
@@ -235,6 +236,12 @@ article.active {
 .h2 { font-size: var(--fs-1); }
 
 .h3 { font-size: var(--fs-2); }
+
+.h3h { font-size: 25px;
+margin-top: 30px;
+margin-bottom: -20px;
+
+}
 
 .h4 { font-size: var(--fs-4); }
 
@@ -1628,17 +1635,27 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-list {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: flex-start; /* Peut rester flex-start si ce n'est pas le problème */
+    align-items: center; /* Centrage vertical des items dans la liste */
     gap: 25px;
     padding-left: 5px;
     margin-bottom: 30px;
+    margin-top: 50px;
   }
 
   .filter-item button {
     color: var(--light-gray);
     font-size: var(--fs-5);
     transition: var(--transition-1);
+    margin-top: 0; /* Supprime le décalage vertical */
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex; /* Utilisez flex pour aligner le texte si nécessaire */
+    justify-content: center; /* Centre le texte horizontalement */
+    align-items: center; /* Centre le texte verticalement */
+    height: 40px; /* Définissez une hauteur explicite si nécessaire */
+    width: 100%; /* Si le bouton doit occuper tout l'espace */
+    padding: 0; /* Supprimez les marges intérieures superflues */
+    
   }
 
   .filter-item button:hover { color: var(--light-gray-70); }
@@ -1979,74 +1996,40 @@ header {
   justify-content: center; /* Centre les vidéos horizontalement */
   align-items: center; /* Aligne les vidéos verticalement */
 }
+.video2-container {
+  display: flex; /* Active l'affichage en ligne des éléments */
+  gap: 20px; /* Ajoute un espacement entre les vidéos */
+  margin-top: -40px;
+  margin-bottom: -15px;
+  justify-content: center; /* Centre les vidéos horizontalement */
+  align-items: center; /* Aligne les vidéos verticalement */
+}
+
+
+.video3-container {
+  display: flex; /* Active l'affichage en ligne des éléments */
+  gap: 20px; /* Ajoute un espacement entre les vidéos */
+  margin-top: 0px;
+  margin-bottom: -15px;
+  justify-content: center; /* Centre les vidéos horizontalement */
+  align-items: center; /* Aligne les vidéos verticalement */
+}
 
 .video-box {
   text-align: center; /* Centre le texte et les vidéos à l'intérieur de chaque box */
 }
-/* Slider Container */
-.slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: var(--shadow-2);
+
+.overlay img {
+  animation: zoom-in 0.3s ease;
 }
 
-/* Slides */
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+@keyframes zoom-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
-
-.slide {
-  min-width: 100%;
-  transition: opacity 0.5s ease;
-  position: relative;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.slide-description {
-  position: absolute;
-  bottom: 15px;
-  left: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--white-2);
-  padding: 10px;
-  border-radius: 5px;
-  font-size: var(--fs-6);
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: var(--white-1);
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 20px;
-  z-index: 2;
-  border-radius: 50%;
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-.slider-btn:hover {
-  background-color: var(--orange-yellow-crayola);
-}
-
-
